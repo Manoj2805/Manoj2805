@@ -20,7 +20,7 @@ final class FastScanner {
         return buffer[ptr++];
     }
 
-    long nextLong() throws IOException {
+    public long nextLong() throws IOException {
         int c;
         do {
             c = read();
@@ -40,7 +40,7 @@ final class FastScanner {
         return value * sign;
     }
 
-    int nextInt() throws IOException {
+    public int nextInt() throws IOException {
         return (int) nextLong();
     }
 }

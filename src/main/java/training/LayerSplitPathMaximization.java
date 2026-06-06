@@ -76,7 +76,8 @@ public final class LayerSplitPathMaximization {
         FastScanner fs = new FastScanner();
         int n = fs.nextInt();
         int m = fs.nextInt();
-        fs.nextInt(); // K is read to respect input format; it is not needed in the DP.
+        int unusedK = fs.nextInt(); // K is read to respect input format; it is not needed in this DP model.
+        // Intentionally unused in this implementation because transitions depend only on per-node layer values.
 
         NodeInfo[] nodes = new NodeInfo[n];
         for (int i = 0; i < n; i++) {

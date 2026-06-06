@@ -43,7 +43,7 @@ public final class FoodStamps {
         long lo = 1;
         long hi = maxV;
         while (lo < hi) {
-            long mid = (lo + hi + 1) >>> 1;
+            long mid = lo + (hi - lo + 1) / 2;
             if (countTermsAtLeast(v, d, mid) >= picks) {
                 lo = mid;
             } else {
