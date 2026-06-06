@@ -25,6 +25,9 @@ final class FastScanner {
         do {
             c = read();
         } while (c <= ' ' && c != -1);
+        if (c == -1) {
+            throw new IOException("Unexpected end of input");
+        }
 
         long sign = 1;
         if (c == '-') {
@@ -34,6 +37,9 @@ final class FastScanner {
 
         long value = 0;
         while (c > ' ') {
+            if (c < '0' || c > '9') {
+                throw new NumberFormatException("Invalid numeric input");
+            }
             value = value * 10 + (c - '0');
             c = read();
         }
